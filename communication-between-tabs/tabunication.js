@@ -68,16 +68,16 @@ window.LocalStorageEngine = (function() {
 })();
 
 window.CustomEvent = (function () {
-  function CustomEvent ( event, params ) {
-    params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent( 'CustomEvent' );
-    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
-    return evt;
-   };
+	function CustomEvent ( event, params ) {
+		params = params || { bubbles: false, cancelable: false, detail: undefined };
+		var evt = document.createEvent( 'CustomEvent' );
+		evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+		return evt;
+	};
 
-  CustomEvent.prototype = window.Event.prototype;
+	CustomEvent.prototype = window.Event.prototype;
 
-  return CustomEvent;
+	return CustomEvent;
 })();
 
 window.tabunication = (function() {
