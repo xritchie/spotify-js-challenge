@@ -94,6 +94,7 @@ window.tabunication = (function() {
 			return new Tabunication(selector);
 
 		this.engine = (!engine) ? new LocalStorageEngine() : engine;
+		this.callbacks = [];
 
 		document.addEventListener("tabunication:push", function(e) {
 			console.log("pushed: " + e.detail.key);
@@ -104,12 +105,18 @@ window.tabunication = (function() {
 		});
 
 		window.addEventListener('storage', function (e){
-		    console.log("key: " + e.key);
-		    console.log("newValue: " + e.newValue);  
-		    console.log("oldValue: " + e.oldValue);  
-		    console.log("url: " + e.url);  
-		    console.log("storageArea: " + e.storageArea);  
-		});
+			if (this.callbacks.length > 0) {
+				this.callbacks.forEach(function(entry) {
+					entry.apply(this, [e]);
+				}.bind(this))
+			} else {
+				console.log("key: " + e.key);
+			    console.log("newValue: " + e.newValue);  
+			    console.log("oldValue: " + e.oldValue);  
+			    console.log("url: " + e.url);  
+			    console.log("storageArea: " + e.storageArea);  
+			}  
+		}.bind(this));
 
 		return this;
 	};
@@ -126,6 +133,14 @@ window.tabunication = (function() {
 		},
 		get: function (key) {
 			return this.engine.get(key)
+		},
+		addCallback: function(callback) {
+			this.callbacks.push(callback);
+			return this;
+		},
+		clearCallbacks: function() {
+			this.callbacks = [];
+			return this;
 		}
 	};
 
@@ -143,5 +158,6 @@ window.tabunication = (function() {
 })();
 
 window.onload = function() {
+	localStorage.clear();
     window.tabunication.getInstance();
 }
