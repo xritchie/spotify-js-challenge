@@ -1,6 +1,8 @@
-Unit testing + Refactoring
+Unit testing + Refactoring (COMPLETE)
 ==========================
 ![Spotify Logo](../resources/spotify-logo.png)
+
+Completed Using: Jasmine
 
 Refactor a fragment of code.
 

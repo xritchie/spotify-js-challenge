@@ -1,4 +1,4 @@
-Communication between tabs
+Communication between tabs (COMPLETED)
 ==========================
 ![Spotify Logo](../resources/spotify-logo.png)
 

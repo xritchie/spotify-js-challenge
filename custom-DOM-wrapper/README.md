@@ -1,4 +1,4 @@
-Custom DOM wrapper
+Custom DOM wrapper (COMPLETED)
 ==================
 ![Spotify Logo](../resources/spotify-logo.png)
 

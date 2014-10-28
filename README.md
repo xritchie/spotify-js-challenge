@@ -28,9 +28,10 @@ Spotify Javascript Coding challenges
 Challenge
 =========
 
-* [Custom DOM wrapper](./custom-DOM-wrapper/README.md) - **3 Points**
-* [Communication between tabs](./communication-between-tabs/README.md) - **3 Points**
-* [Unit testing and refactoring](./unit-testing-and-refactoring/README.md) - **2 Points**
+* [Simple Inheritance Framwork Classy] (./classy/README.md) - COMPLETED - **2 Points**
+* [Custom DOM wrapper](./custom-DOM-wrapper/README.md) - COMPLETED - **3 Points**
+* [Communication between tabs](./communication-between-tabs/README.md) - COMPLETED - **3 Points**
+* [Unit testing and refactoring](./unit-testing-and-refactoring/README.md) - COMPLETED - **2 Points**
 * [Cross-browser code](./cross-browser-code/README.md) - **2 Points**
 * [Secure enough](./secure-enough/README.md) - **2 Points**
 * [Mouse issue](./mouse-issue/README.md) - **1 Point**
